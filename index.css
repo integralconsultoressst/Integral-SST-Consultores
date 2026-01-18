@@ -1,0 +1,756 @@
+/* ==== Reset básico y fuentes ==== */
+/* Elimina márgenes/paddings por defecto y usa un modelo de caja consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*CODIGO PARA LA IMAGEN AL LADO DE LA BARRA PRINCIPAL*/
+.img-text-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    gap: 10px; /* espacio entre imagen y texto */
+}
+
+/* Tamaño del logo */
+.img-text-link img {
+    width: 75px;   /* 👈 cambia este valor */
+    height: auto;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.logo-text span {
+    display: block;
+}
+
+.titulo {
+    font-weight: bold;   /* negrilla */
+}
+
+.subtitulo {
+    font-weight: normal; /* sin negrilla */
+    font-size: 13px;
+}
+
+/* Texto */
+.img-text-link span {
+    font-family: 'Montserrat', 'Open Sans', 'Lato', sans-serif;
+    font-size: 18px; /* ajustable */
+    font-weight: 600;
+}
+/**/
+
+
+/* Fuente principal y color de fondo general */
+body {
+    margin-top: 90px; 
+    font-family: 'Montserrat', 'Open Sans', 'Lato';
+    background: #ffffff;
+    color: #22293e;
+    line-height: 1.6;
+    
+}
+
+/* ==== Navbar ==== */
+.navbar {
+    background: #166cff; /* Fondo azul fuerte */
+    color: #fff;
+    padding: 1.2rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* para que quede encima de todo */
+
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between; /* Espacia logo y menú */
+    align-items: center;
+    max-width: 1900px; /* Anchura máxima */
+    margin: 0 auto;   /* Centra el contenido */
+    padding: 0 30px;
+    
+}
+
+.navbar a {
+    color: #fff;
+    margin-left: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+
+
+    
+}
+
+.navbar a:hover {
+    color: #000000; /* Efecto al pasar el mouse */
+}
+
+.navbar .logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* ==== Hero/Header Principal ==== */
+
+.hero {
+    background: rgb(226, 239, 255);
+    padding: 80px 30px;
+}
+
+.hero-container {
+    display: flex;
+    gap: 100px;
+}
+
+.contenedor {
+    background: rgb(241, 241, 241);
+    padding: 80px 30px;
+    display: flex;
+    align-items: center; /* CAMBIAR si estaba en flex-start */
+    gap: 60px;
+}
+
+.contenedor-container {
+    display: flex;
+    gap: 100px;
+}
+
+.contenedor-izquierda {
+    flex: 1;
+}
+
+.contenedor-izquierda img {
+    width: 85%;
+    border-radius: 20px;
+    align-items: center;
+    margin-left: 140px;
+    margin-bottom: 20px;
+}
+
+.linea-texto {
+    display: flex;
+    align-items: flex-start; /* mejor que center para textos largos */
+    gap: 8px;
+}
+
+.linea-texto h2 {
+    margin: 0;
+    margin-left: 0px;
+    font-size: 18px;
+    white-space: nowrap; /* evita que se parta en varias líneas */
+    color: #166cff;
+}
+
+.linea-texto p {
+    font-size: 10px;
+    margin-bottom: -100px;
+    color: #000000;
+ 
+}
+
+.contenedor-derecha {
+    flex: 1;
+    max-width: 1500px;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+
+.contenedor-derecha h1 {
+    font-size: 43px;
+    margin-top: -50px;
+    margin-bottom: 20px;
+}
+/*
+.contenedor-derecha h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #166cff;
+}*/
+
+.contenedor-derecha p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+
+/* IZQUIERDA */
+.hero-izquierda {
+    flex: 1;
+    max-width: 1500px;
+    margin-left: 80px;
+}
+
+.hero-izquierda h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-izquierda p {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+/* BOTONES */
+.buttons-container {
+    display: flex;
+    gap: 20px;           /* Espacio entre los botones */
+    margin-top: 42px;    /* Separación superior opcional */
+}
+
+.buttons-container button {
+    padding: 20px 28px;
+    font-size: 16px;
+    
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btn-primary {
+    background-color: #166cff;
+    
+    color: white;
+    border: 1px solid #166cff;
+}
+
+.btn-primary:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+.btn-secondary {
+    background-color: rgb(226, 239, 255);
+    
+    color: #166cff;
+    border: 1px solid #166cff;
+}
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+
+/* DERECHA */
+.hero-derecha {
+    flex: 1;
+}
+
+.hero-derecha img {
+    width: 90%;
+    border-radius: 20px;
+    align-items: center;
+    margin-left: 10px;
+}
+
+
+
+/* ==== Sección: Beneficios ==== */
+.section-title {
+    
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2.5rem 0 0.7rem 0;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #4b4b4b;
+    margin-bottom: 2.4rem;
+}
+
+.cards-container {
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 3.5rem;
+    margin: 0 auto 2.7rem auto;
+    max-width: 1600px;
+    margin-bottom: 80px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    border: solid rgb(226, 239, 255);
+    padding: 2.5rem 1.3rem 3rem 1.3rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.card-icon {
+    width: 80px;
+  height: 80px;
+  background-color: #166cff; /* azul */
+  border-radius: 50%;        /* círculo */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon img {
+  width: 70px;   /* tamaño del icono */
+  height: 45px;
+  object-fit: contain;
+}
+
+
+.card-title {
+    margin-top: 22px;
+    color:rgb(0, 0, 0);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    text-align: center;
+    font-size: 27px;
+}
+
+.card-desc {
+    color: #46506c;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* ==== Responsive Design: Adaptar a pantallas más pequeñas ==== */
+@media (max-width: 900px) {
+    .cards-container {
+        flex-direction: column;
+        gap: 1.1rem;
+    }
+    .hero {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    .hero-image img {
+        margin: 0 auto;
+    }
+    .navbar .container {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+}
+
+
+
+/*
+*/
+
+
+
+.contenedorcards {
+    margin-top: -180px;
+    background: rgb(241, 241, 241);
+    padding: 80px 30px;
+    display: flex;
+    align-items: center; /* CAMBIAR si estaba en flex-start */
+    gap: 60px;
+    margin-bottom: -45px;
+}
+
+
+.cards2-container {
+    background: rgb(241, 241, 241);
+    
+    justify-content: center;
+   
+    margin: 0 auto 2.7rem auto;
+    max-width: 1600px;
+    margin-bottom: 80px;
+    display: flex;
+    gap: 0px; /* espacio entre cards */
+    padding: 0 2rem;
+}
+
+.card2 {
+    margin-top: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+    
+    background: white;
+    border-radius: 12px;
+    border: solid rgb(255, 255, 255);
+    padding: 2.5rem 1.3rem 3rem 1.3rem;
+    flex: 1;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+.card2-icon {
+        width: 60px;
+  height: 60px;
+  background-color: rgb(210, 230, 255); /* azul */
+  border-radius: 50%;        /* círculo */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.card2-icon img {
+  width: 40px;   /* tamaño del icono */
+  height: 35px;
+  object-fit: contain;
+}
+
+.card2-title {
+    color:rgb(0, 0, 0);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.card2-desc {
+    color: #46506c;
+    font-size: 0.98rem;
+    text-align: center;
+}
+
+
+.container2 {
+    background: rgb(241, 241, 241);
+    padding: 45px ;
+    
+}
+    
+
+/*SECCION PRINCIPIOS*/
+
+.section-title {
+    
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2.5rem 0 0.7rem 0;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #4b4b4b;
+    margin-bottom: 2.4rem;
+}
+
+
+/**/
+
+/*CARDS 3*/
+
+.contenedorcards3 {
+    margin-top: -180px;
+    background: rgb(241, 241, 241);
+    padding: 80px 30px;
+    display: flex;
+    align-items: center; /* CAMBIAR si estaba en flex-start */
+    gap: 60px;
+    margin-bottom: -45px;
+}
+
+
+.card3-container {
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    gap: 3.5rem;
+    margin: 0 auto 2.7rem auto;
+    max-width: 1600px;
+    margin-bottom: 80px;
+    padding: 0 2rem 0 4.5rem;
+    margin-top: -10px;
+}
+
+.card3 {
+    
+   
+    
+    background: white;
+    border-radius: 12px;
+    border: 2px solid rgb(224, 224, 224);
+    padding: 3rem 2rem;
+    flex: 1;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: left;
+    margin: 0px -10px;
+}
+
+
+.card3-icon {
+    margin-top: -20px;
+        width: 60px;
+  height: 60px;
+  background-color: rgb(210, 230, 255); /* azul */
+  border-radius: 50%;        /* círculo */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.card3-icon img {
+  width: 40px;   /* tamaño del icono */
+  height: 30px;
+  object-fit: contain;
+}
+
+.card3-title {
+    color:rgb(0, 0, 0);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    text-align: left;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.card3-desc {
+    color: #46506c;
+    font-size: 0.98rem;
+    text-align: left;
+}
+
+
+.container3 {
+    background: rgb(241, 241, 241);
+    padding: 80px 30px;
+    
+}
+
+
+
+/*IDENTIFICACION TEMPRANA*/
+
+.fondo {
+    margin-top: -80px;
+    background: rgb(241, 241, 241);
+    padding: 80px 30px;
+    display: flex;
+    align-items: center; /* CAMBIAR si estaba en flex-start */
+    gap: 60px;
+}
+
+.fondo-container {
+    display: flex;
+    gap: 100px;
+    background: rgb(241, 241, 241);
+    margin-bottom: 0px;
+}
+
+.fondo-izquierda {
+    flex: 1;
+}
+
+.fondo-izquierda img {
+    width: 85%;
+    border-radius: 10px 0 0 10px;
+    align-items: center; 
+    margin-left: 160px;
+    margin-bottom: 20px;
+}
+
+.fondo-texto {
+    display: flex;
+    align-items: flex-start; /* mejor que center para textos largos */
+    gap: 8px;
+}
+
+.fondo-texto h2 {
+    margin: 0;
+    margin-left: 0px;
+    font-size: 18px;
+    white-space: nowrap; /* evita que se parta en varias líneas */
+    color: #166cff;
+}
+
+.fondo-derecha p {
+    font-size: 10px;
+    margin-top: 0px;
+    margin-bottom: -100px;
+    color: #000000;
+ 
+}
+
+.fondo-derecha {
+    border-color: #000000;
+    flex: 1;
+    max-width: 1500px;
+    margin-left: 80px;
+    margin-top: 145px;
+}
+
+
+.fondo-derecha h1 {
+    margin-left: -45px;
+    font-size: 35px;
+    margin-top: -50px;
+    margin-bottom: 20px;
+}
+/*
+.contenedor-derecha h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #166cff;
+}*/
+
+.fondo-derecha p {
+    margin-left: -45px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+
+
+.cardfondo {
+    /*margin: -100px 100px -550px -180px;*/
+    
+    box-shadow:0 8px 20px rgba(0, 0, 0, 0.20);
+
+    
+    background: white;
+    border-radius: 0 12px 12px 0;
+    border: solid rgb(255, 255, 255);
+    padding: 100px 5px 93px 5px;
+    /*padding: 2.5rem 1.3rem 3rem 1.3rem;*/
+    flex: 1;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    margin-top: -91px;
+    margin-left: -220px;
+    margin-right: 100px;
+}
+
+/**/
+
+
+/*NUESTROS SERVICIOS*/
+
+.contenedorcards4 {
+    margin-top: -180px;
+    background: rgb(255, 255, 255);
+    padding: 80px 30px;
+    display: flex;
+    align-items: center; /* CAMBIAR si estaba en flex-start */
+    gap: 60px;
+    margin-bottom: -45px;
+}
+
+
+.card4-container {
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    gap: 3.5rem;
+    margin: 0 auto 2.7rem auto;
+    max-width: 1600px;
+    margin-bottom: 80px;
+    padding: 0 2rem 0 4.5rem;
+    margin-top: -10px;
+    margin-left: 100px;
+}
+
+.card4 {
+    background: rgb(232, 243, 255);
+    border-radius: 12px;
+    border: none;
+    padding: 45px 20px 30px 20px;
+    
+    /*padding: 3rem 2rem;*/
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 0px -10px;
+    
+    margin-bottom: -40px;
+}
+
+
+.card4-icon {
+    margin-top: -20px;
+    margin-left: 10px;
+        width: 60px;
+  height: 60px;
+  background-color: #166cff; /* azul */
+  border-radius: 20%;        /* círculo */
+  
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+
+.card4-icon img {
+  width: 60px;   /* tamaño del icono */
+  margin-top: 5px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.card4-title {
+    color:rgb(0, 0, 0);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    text-align: left;
+    font-size: 20px;
+    margin-top: -60px;
+    margin-left: 100px;
+}
+
+.card4-desc {
+    color: #46506c;
+    font-size: 0.98rem;
+    text-align: left;
+    margin-left: 100px;
+
+}
+
+
+.container4 {
+    background: rgb(255, 255, 255);
+    padding: 80px 30px;
+    margin-top: -80px;
+    
+}
